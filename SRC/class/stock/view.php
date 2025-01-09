@@ -110,7 +110,7 @@ function subStockView($param)
 			</table>
 		</div>
 
-		<input type="image" src="./images/btn_search.png" onclick="form.act.value='stockEditComplete';form.submit();" />
+		<input type="image" src="./images/btn_search.png" onclick="form.act.value='stockSearch';form.sPage.value=1;form.submit();" />
 
 		<hr />
 
@@ -125,7 +125,7 @@ function subStockView($param)
 		$row = mysqli_fetch_array($res);
 
 		$count = $row[0];
-		$sPage = fnPage($count, $param["sPage"], 'stockSearch');
+		$param["sPage"] = fnPage($count, $param["sPage"], 'stockSearch');
 		?>
 
 		<div class="list">
