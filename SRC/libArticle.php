@@ -132,11 +132,12 @@ function subArticle()
 					<td class="list_td<?php print $i ?>"><?php print $sellCharge ?></td>
 				</tr>
 			<?php
-				$i = ($i + 1) % 3;
+				$i = ($i + 1) % 2;
 			}
 			?>
 		</table>
 	</div>
+	</form>
 <?php
 }
 
